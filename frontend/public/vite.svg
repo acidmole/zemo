@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="45" fill="#0a0a1a" stroke="#00aaff" stroke-width="3"/>
+  <text x="50" y="58" text-anchor="middle" fill="#00ff88" font-size="28" font-weight="bold" font-family="monospace">Z</text>
+  <circle cx="50" cy="50" r="40" fill="none" stroke="#aa00ff" stroke-width="1" stroke-dasharray="4 4"/>
+</svg>

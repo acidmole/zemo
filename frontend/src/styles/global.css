@@ -1,0 +1,790 @@
+/* ===== Space Station Zemo - Global Styles ===== */
+
+:root {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #111128;
+  --bg-panel: #151530;
+  --bg-card: #1a1a3a;
+  --bg-hover: #222250;
+
+  --text-primary: #e0e0e0;
+  --text-secondary: #9090b0;
+  --text-muted: #606080;
+
+  --neon-green: #00ff88;
+  --neon-blue: #00aaff;
+  --neon-purple: #aa00ff;
+  --neon-red: #ff3355;
+  --neon-yellow: #ffcc00;
+  --neon-orange: #ff8800;
+
+  --border-color: #2a2a4a;
+  --border-glow: rgba(0, 170, 255, 0.3);
+
+  --font-mono: "Courier New", Courier, monospace;
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ===== Layout ===== */
+.game-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-columns: 200px 1fr 280px;
+  grid-template-areas:
+    "header  header  header"
+    "health  board   info"
+    "actions actions actions"
+    "log     log     log";
+  height: 100vh;
+  gap: 4px;
+  padding: 4px;
+}
+
+.game-header {
+  grid-area: header;
+}
+
+.game-health {
+  grid-area: health;
+  overflow-y: auto;
+}
+
+.game-board {
+  grid-area: board;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.game-info {
+  grid-area: info;
+  overflow-y: auto;
+}
+
+.game-actions {
+  grid-area: actions;
+}
+
+.game-log {
+  grid-area: log;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* ===== Panels ===== */
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 8px;
+}
+
+.panel-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--neon-blue);
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 4px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 8px var(--border-glow);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1a3a6a, #2a4a8a);
+  border-color: var(--neon-blue);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2a4a8a, #3a5aaa);
+  box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #5a1a2a, #7a2a3a);
+  border-color: var(--neon-red);
+  color: #fff;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7a2a3a, #9a3a4a);
+  box-shadow: 0 0 12px rgba(255, 51, 85, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #1a4a2a, #2a6a3a);
+  border-color: var(--neon-green);
+  color: #fff;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2a6a3a, #3a8a4a);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.4);
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+/* ===== Cards ===== */
+.card-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  transition: border-color 0.15s ease;
+}
+
+.card-item:hover {
+  border-color: var(--neon-purple);
+}
+
+.card-item .card-name {
+  font-weight: 600;
+  color: var(--neon-yellow);
+}
+
+.card-item .card-desc {
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.card-item .card-weight {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+}
+
+.card-item.trap {
+  border-color: var(--neon-red);
+  background: rgba(255, 51, 85, 0.08);
+}
+
+/* ===== SVG Board ===== */
+.board-svg {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 280px);
+}
+
+.board-edge {
+  stroke: #2a2a4a;
+  stroke-width: 2;
+}
+
+.board-edge.interior {
+  stroke: #3a3a5a;
+  stroke-dasharray: 6 4;
+}
+
+/* ===== Health Track ===== */
+.health-bar-container {
+  margin-bottom: 8px;
+}
+
+.health-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  margin-bottom: 2px;
+}
+
+.health-bar-label .char-name {
+  font-weight: 600;
+}
+
+.health-bar-label .hp-text {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.health-bar-track {
+  width: 100%;
+  height: 14px;
+  background: #1a1a2a;
+  border-radius: 7px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.health-bar-fill {
+  height: 100%;
+  border-radius: 7px;
+  transition: width 0.3s ease;
+}
+
+.health-status {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.health-status.dead {
+  color: var(--neon-red);
+  font-weight: 700;
+}
+
+.health-status.bio-vat {
+  color: var(--neon-purple);
+}
+
+/* ===== Dialogs / Modals ===== */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialog {
+  background: var(--bg-panel);
+  border: 2px solid var(--neon-blue);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 30px rgba(0, 170, 255, 0.2);
+}
+
+.dialog-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--neon-green);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.dialog-body {
+  margin-bottom: 16px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ===== Setup Screen ===== */
+.setup-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.setup-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--neon-green), var(--neon-blue), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.setup-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}
+
+.setup-step {
+  margin-bottom: 24px;
+}
+
+.setup-step h3 {
+  color: var(--neon-blue);
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.character-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.character-card:hover {
+  border-color: var(--neon-blue);
+  transform: translateY(-2px);
+}
+
+.character-card.selected {
+  border-color: var(--neon-green);
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.3);
+}
+
+.character-card.taken {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.character-card .char-portrait {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.character-card .char-stats {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.character-card .char-stats span {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.player-setup-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.player-setup-row input {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.player-setup-row input:focus {
+  border-color: var(--neon-blue);
+}
+
+.player-setup-row select {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.player-setup-row select:focus {
+  border-color: var(--neon-blue);
+}
+
+.code-input {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.code-input .code-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* ===== Turn Indicator ===== */
+.turn-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.turn-indicator .turn-phase {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+}
+
+.turn-indicator .turn-phase.movement {
+  color: var(--neon-blue);
+}
+
+.turn-indicator .turn-phase.action {
+  color: var(--neon-green);
+}
+
+.turn-indicator .turn-phase.round_end {
+  color: var(--neon-yellow);
+}
+
+.turn-indicator .turn-player {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.turn-indicator .turn-round {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+/* ===== Action Bar ===== */
+.action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  flex-wrap: wrap;
+}
+
+.action-bar .action-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-right: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ===== Movement UI ===== */
+.movement-ui {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px;
+  background: var(--bg-panel);
+  border: 1px solid var(--neon-blue);
+  border-radius: var(--radius-md);
+}
+
+.movement-ui .roll-result {
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--neon-yellow);
+}
+
+.movement-ui .movement-hint {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ===== Dice Roll Animation ===== */
+.dice-container {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dice {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 2px solid var(--neon-yellow);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--neon-yellow);
+}
+
+.dice.rolling {
+  animation: dice-shake 0.1s infinite;
+}
+
+@keyframes dice-shake {
+  0% { transform: rotate(-5deg) scale(1.05); }
+  50% { transform: rotate(5deg) scale(0.95); }
+  100% { transform: rotate(-5deg) scale(1.05); }
+}
+
+/* ===== Game Log ===== */
+.log-container {
+  padding: 6px 10px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.log-entry {
+  color: var(--text-secondary);
+  padding: 1px 0;
+  border-bottom: 1px solid rgba(42, 42, 74, 0.3);
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+/* ===== Game Over Screen ===== */
+.game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  gap: 16px;
+}
+
+.game-over h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, var(--neon-green), var(--neon-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.game-over .winner-name {
+  font-size: 1.8rem;
+  color: var(--neon-green);
+  font-weight: 700;
+}
+
+/* ===== Error Display ===== */
+.error-banner {
+  background: rgba(255, 51, 85, 0.15);
+  border: 1px solid var(--neon-red);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  color: var(--neon-red);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-banner button {
+  background: none;
+  border: none;
+  color: var(--neon-red);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 4px;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a5a;
+}
+
+/* ===== Token pulse animation ===== */
+@keyframes token-pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px currentColor); }
+  50% { filter: drop-shadow(0 0 10px currentColor); }
+}
+
+.token-current {
+  animation: token-pulse 1.5s ease-in-out infinite;
+}
+
+/* ===== Space glow for reachable ===== */
+@keyframes space-glow {
+  0%, 100% { filter: drop-shadow(0 0 3px var(--neon-green)); }
+  50% { filter: drop-shadow(0 0 8px var(--neon-green)); }
+}
+
+.space-reachable {
+  animation: space-glow 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+/* ===== Checkbox styled ===== */
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+  accent-color: var(--neon-green);
+}
+
+/* ===== Tooltip ===== */
+.tooltip-wrapper {
+  position: relative;
+}
+
+.tooltip-wrapper .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+}
+
+/* ===== Number input stepper ===== */
+.num-stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.num-stepper .num-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--neon-green);
+  font-family: var(--font-mono);
+  min-width: 40px;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .game-layout {
+    grid-template-columns: 160px 1fr 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "board"
+      "actions"
+      "health"
+      "info"
+      "log";
+  }
+
+  .board-svg {
+    max-height: 50vh;
+  }
+}
