@@ -1,0 +1,3109 @@
+{
+ "image": {
+  "src": "/board.webp",
+  "width": 2874,
+  "height": 2199
+ },
+ "spaces": [
+  {
+   "id": "h_3_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_4_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 754,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_5_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 862,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_6_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 969,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_7_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1077,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_8_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1185,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_9_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1293,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_12_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1617,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_13_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1725,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_14_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1833,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_15_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1940,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_16_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2048,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_17_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2156,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_19_0",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2372,
+   "y": 318,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 426,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 535,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 644,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_4",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 752,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_5",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 860,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_7",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 1078,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_8",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 1186,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_9",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 1294,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_0_10",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 322,
+   "y": 1403,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 426,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 535,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 644,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_4",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 752,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_5",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 860,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_1_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 430,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_2_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 538,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_4_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 754,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_5_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 862,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_6_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 969,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_7_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1077,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_8_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1185,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_12_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1617,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_13_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1725,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_14_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1833,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_15_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1940,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_16_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2048,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_17_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2156,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_19_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2372,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_20_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2480,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_6",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 969,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 426,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 535,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 644,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_7",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 1078,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_8",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 1186,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_9",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 1294,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_10",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 1403,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_11",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 1512,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_18_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2264,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_19_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2372,
+   "y": 644,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_20_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2480,
+   "y": 644,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 644,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 426,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 535,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_4",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 752,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_5",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 860,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_7",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 1078,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_8",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 1186,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_9",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 1294,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_21_10",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2588,
+   "y": 1403,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_1_9",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 430,
+   "y": 1294,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_2_9",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 538,
+   "y": 1294,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_9",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 1294,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_10",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 1403,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_11",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 1512,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_2_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 520,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 136,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_3_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 646,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_4_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 754,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_5_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 862,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_6_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 969,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_7_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1077,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_8_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1185,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_9_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1293,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_12_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1617,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_13_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1725,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_14_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1833,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_15_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1940,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_16_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2048,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "h_17_12",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 2156,
+   "y": 1620,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 0
+   }
+  },
+  {
+   "id": "ne_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1605,
+   "y": 778,
+   "shape": {
+    "kind": "rect",
+    "w": 132,
+    "h": 104,
+    "angle": -58.8
+   }
+  },
+  {
+   "id": "ne_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1668,
+   "y": 674,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": -58.8
+   }
+  },
+  {
+   "id": "ne_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1724,
+   "y": 582,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": -58.8
+   }
+  },
+  {
+   "id": "ne_4",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1780,
+   "y": 489,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": -58.8
+   }
+  },
+  {
+   "id": "ne_5",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1826,
+   "y": 412,
+   "shape": {
+    "kind": "rect",
+    "w": 68,
+    "h": 104,
+    "angle": -58.8
+   }
+  },
+  {
+   "id": "brig_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1814,
+   "y": 629,
+   "shape": {
+    "kind": "rect",
+    "w": 98,
+    "h": 104,
+    "angle": 28.8
+   }
+  },
+  {
+   "id": "brig_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1907,
+   "y": 681,
+   "shape": {
+    "kind": "rect",
+    "w": 108,
+    "h": 104,
+    "angle": 28.8
+   }
+  },
+  {
+   "id": "brig_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1998,
+   "y": 731,
+   "shape": {
+    "kind": "rect",
+    "w": 92,
+    "h": 104,
+    "angle": 28.8
+   }
+  },
+  {
+   "id": "sw_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1319,
+   "y": 1166,
+   "shape": {
+    "kind": "rect",
+    "w": 88,
+    "h": 104,
+    "angle": 131.0
+   }
+  },
+  {
+   "id": "sw_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1254,
+   "y": 1241,
+   "shape": {
+    "kind": "rect",
+    "w": 102,
+    "h": 104,
+    "angle": 131.0
+   }
+  },
+  {
+   "id": "sw_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1184,
+   "y": 1322,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 131.0
+   }
+  },
+  {
+   "id": "sw_4",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1113,
+   "y": 1403,
+   "shape": {
+    "kind": "rect",
+    "w": 104,
+    "h": 104,
+    "angle": 131.0
+   }
+  },
+  {
+   "id": "sw_5",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1031,
+   "y": 1497,
+   "shape": {
+    "kind": "rect",
+    "w": 136,
+    "h": 104,
+    "angle": 131.0
+   }
+  },
+  {
+   "id": "nwbelt_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1320,
+   "y": 757,
+   "shape": {
+    "kind": "rect",
+    "w": 129,
+    "h": 112,
+    "angle": -107.9
+   },
+   "tags": [
+    "striped_belt"
+   ]
+  },
+  {
+   "id": "nwbelt_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1267,
+   "y": 593,
+   "shape": {
+    "kind": "rect",
+    "w": 208,
+    "h": 112,
+    "angle": -107.9
+   },
+   "tags": [
+    "striped_belt"
+   ]
+  },
+  {
+   "id": "nwbelt_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1214,
+   "y": 431,
+   "shape": {
+    "kind": "rect",
+    "w": 124,
+    "h": 112,
+    "angle": -107.9
+   },
+   "tags": [
+    "striped_belt"
+   ]
+  },
+  {
+   "id": "sebelt_1",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1577,
+   "y": 1162,
+   "shape": {
+    "kind": "rect",
+    "w": 127,
+    "h": 112,
+    "angle": 70.5
+   },
+   "tags": [
+    "striped_belt"
+   ]
+  },
+  {
+   "id": "sebelt_2",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1635,
+   "y": 1327,
+   "shape": {
+    "kind": "rect",
+    "w": 216,
+    "h": 112,
+    "angle": 70.5
+   },
+   "tags": [
+    "striped_belt"
+   ]
+  },
+  {
+   "id": "sebelt_3",
+   "type": "hallway",
+   "name": "Hallway",
+   "x": 1696,
+   "y": 1498,
+   "shape": {
+    "kind": "rect",
+    "w": 139,
+    "h": 112,
+    "angle": 70.5
+   },
+   "tags": [
+    "striped_belt"
+   ]
+  },
+  {
+   "id": "ring_nw",
+   "type": "hallway",
+   "name": "Pod Ring",
+   "x": 1365,
+   "y": 848,
+   "shape": {
+    "kind": "polygon",
+    "points": [
+     [
+      1291,
+      855
+     ],
+     [
+      1303,
+      840
+     ],
+     [
+      1318,
+      827
+     ],
+     [
+      1333,
+      815
+     ],
+     [
+      1350,
+      805
+     ],
+     [
+      1368,
+      797
+     ],
+     [
+      1386,
+      790
+     ],
+     [
+      1406,
+      786
+     ],
+     [
+      1421,
+      873
+     ],
+     [
+      1411,
+      876
+     ],
+     [
+      1401,
+      879
+     ],
+     [
+      1392,
+      883
+     ],
+     [
+      1383,
+      889
+     ],
+     [
+      1375,
+      895
+     ],
+     [
+      1368,
+      902
+     ],
+     [
+      1361,
+      910
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ring_ne",
+   "type": "hallway",
+   "name": "Pod Ring",
+   "x": 1505,
+   "y": 844,
+   "shape": {
+    "kind": "polygon",
+    "points": [
+     [
+      1406,
+      786
+     ],
+     [
+      1426,
+      783
+     ],
+     [
+      1447,
+      783
+     ],
+     [
+      1467,
+      785
+     ],
+     [
+      1487,
+      790
+     ],
+     [
+      1507,
+      796
+     ],
+     [
+      1526,
+      805
+     ],
+     [
+      1543,
+      816
+     ],
+     [
+      1560,
+      828
+     ],
+     [
+      1575,
+      842
+     ],
+     [
+      1588,
+      858
+     ],
+     [
+      1599,
+      876
+     ],
+     [
+      1609,
+      894
+     ],
+     [
+      1528,
+      930
+     ],
+     [
+      1523,
+      921
+     ],
+     [
+      1517,
+      911
+     ],
+     [
+      1510,
+      903
+     ],
+     [
+      1502,
+      896
+     ],
+     [
+      1493,
+      889
+     ],
+     [
+      1484,
+      883
+     ],
+     [
+      1474,
+      879
+     ],
+     [
+      1464,
+      875
+     ],
+     [
+      1453,
+      873
+     ],
+     [
+      1443,
+      872
+     ],
+     [
+      1432,
+      872
+     ],
+     [
+      1421,
+      873
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ring_e",
+   "type": "hallway",
+   "name": "Pod Ring",
+   "x": 1579,
+   "y": 990,
+   "shape": {
+    "kind": "polygon",
+    "points": [
+     [
+      1609,
+      894
+     ],
+     [
+      1616,
+      913
+     ],
+     [
+      1621,
+      934
+     ],
+     [
+      1624,
+      954
+     ],
+     [
+      1625,
+      975
+     ],
+     [
+      1623,
+      996
+     ],
+     [
+      1619,
+      1017
+     ],
+     [
+      1613,
+      1036
+     ],
+     [
+      1604,
+      1055
+     ],
+     [
+      1594,
+      1073
+     ],
+     [
+      1581,
+      1090
+     ],
+     [
+      1513,
+      1033
+     ],
+     [
+      1520,
+      1024
+     ],
+     [
+      1525,
+      1015
+     ],
+     [
+      1530,
+      1005
+     ],
+     [
+      1533,
+      994
+     ],
+     [
+      1535,
+      984
+     ],
+     [
+      1536,
+      973
+     ],
+     [
+      1536,
+      962
+     ],
+     [
+      1534,
+      951
+     ],
+     [
+      1531,
+      940
+     ],
+     [
+      1528,
+      930
+     ]
+    ]
+   },
+   "tags": [
+    "x_ray"
+   ]
+  },
+  {
+   "id": "ring_se",
+   "type": "hallway",
+   "name": "Pod Ring",
+   "x": 1490,
+   "y": 1103,
+   "shape": {
+    "kind": "polygon",
+    "points": [
+     [
+      1581,
+      1090
+     ],
+     [
+      1567,
+      1105
+     ],
+     [
+      1551,
+      1119
+     ],
+     [
+      1534,
+      1130
+     ],
+     [
+      1516,
+      1140
+     ],
+     [
+      1497,
+      1148
+     ],
+     [
+      1477,
+      1153
+     ],
+     [
+      1456,
+      1156
+     ],
+     [
+      1436,
+      1157
+     ],
+     [
+      1415,
+      1156
+     ],
+     [
+      1426,
+      1067
+     ],
+     [
+      1437,
+      1068
+     ],
+     [
+      1448,
+      1068
+     ],
+     [
+      1458,
+      1066
+     ],
+     [
+      1469,
+      1063
+     ],
+     [
+      1479,
+      1059
+     ],
+     [
+      1488,
+      1054
+     ],
+     [
+      1497,
+      1048
+     ],
+     [
+      1506,
+      1041
+     ],
+     [
+      1513,
+      1033
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ring_sw",
+   "type": "hallway",
+   "name": "Pod Ring",
+   "x": 1372,
+   "y": 1096,
+   "shape": {
+    "kind": "polygon",
+    "points": [
+     [
+      1415,
+      1156
+     ],
+     [
+      1393,
+      1152
+     ],
+     [
+      1372,
+      1145
+     ],
+     [
+      1352,
+      1136
+     ],
+     [
+      1333,
+      1124
+     ],
+     [
+      1315,
+      1111
+     ],
+     [
+      1299,
+      1095
+     ],
+     [
+      1365,
+      1036
+     ],
+     [
+      1373,
+      1044
+     ],
+     [
+      1383,
+      1051
+     ],
+     [
+      1393,
+      1057
+     ],
+     [
+      1403,
+      1062
+     ],
+     [
+      1415,
+      1065
+     ],
+     [
+      1426,
+      1067
+     ]
+    ]
+   }
+  },
+  {
+   "id": "ring_w",
+   "type": "hallway",
+   "name": "Pod Ring",
+   "x": 1296,
+   "y": 975,
+   "shape": {
+    "kind": "polygon",
+    "points": [
+     [
+      1299,
+      1095
+     ],
+     [
+      1286,
+      1080
+     ],
+     [
+      1276,
+      1063
+     ],
+     [
+      1267,
+      1045
+     ],
+     [
+      1260,
+      1026
+     ],
+     [
+      1255,
+      1006
+     ],
+     [
+      1252,
+      987
+     ],
+     [
+      1251,
+      966
+     ],
+     [
+      1252,
+      946
+     ],
+     [
+      1256,
+      927
+     ],
+     [
+      1262,
+      907
+     ],
+     [
+      1269,
+      889
+     ],
+     [
+      1279,
+      871
+     ],
+     [
+      1291,
+      855
+     ],
+     [
+      1361,
+      910
+     ],
+     [
+      1355,
+      918
+     ],
+     [
+      1350,
+      928
+     ],
+     [
+      1346,
+      937
+     ],
+     [
+      1343,
+      947
+     ],
+     [
+      1341,
+      958
+     ],
+     [
+      1340,
+      968
+     ],
+     [
+      1340,
+      979
+     ],
+     [
+      1342,
+      989
+     ],
+     [
+      1344,
+      999
+     ],
+     [
+      1348,
+      1009
+     ],
+     [
+      1353,
+      1019
+     ],
+     [
+      1359,
+      1027
+     ],
+     [
+      1365,
+      1036
+     ]
+    ]
+   },
+   "tags": [
+    "x_ray"
+   ]
+  },
+  {
+   "id": "1",
+   "type": "room",
+   "name": "Room 1",
+   "x": 469,
+   "y": 465,
+   "shape": {
+    "kind": "circle",
+    "r": 54
+   }
+  },
+  {
+   "id": "2",
+   "type": "room",
+   "name": "Room 2",
+   "x": 500,
+   "y": 680,
+   "shape": {
+    "kind": "circle",
+    "r": 46
+   }
+  },
+  {
+   "id": "3",
+   "type": "room",
+   "name": "Room 3",
+   "x": 457,
+   "y": 833,
+   "shape": {
+    "kind": "circle",
+    "r": 59
+   }
+  },
+  {
+   "id": "4",
+   "type": "room",
+   "name": "Room 4",
+   "x": 700,
+   "y": 222,
+   "shape": {
+    "kind": "circle",
+    "r": 41
+   }
+  },
+  {
+   "id": "5",
+   "type": "room",
+   "name": "Room 5",
+   "x": 908,
+   "y": 448,
+   "shape": {
+    "kind": "circle",
+    "r": 70
+   }
+  },
+  {
+   "id": "6",
+   "type": "room",
+   "name": "Room 6",
+   "x": 800,
+   "y": 625,
+   "shape": {
+    "kind": "circle",
+    "r": 70
+   }
+  },
+  {
+   "id": "7",
+   "type": "room",
+   "name": "Reactor Room",
+   "x": 800,
+   "y": 835,
+   "shape": {
+    "kind": "circle",
+    "r": 60
+   }
+  },
+  {
+   "id": "8",
+   "type": "room",
+   "name": "Room 8",
+   "x": 969,
+   "y": 805,
+   "shape": {
+    "kind": "circle",
+    "r": 40
+   }
+  },
+  {
+   "id": "9",
+   "type": "room",
+   "name": "Room 9",
+   "x": 1153,
+   "y": 662,
+   "shape": {
+    "kind": "circle",
+    "r": 70
+   }
+  },
+  {
+   "id": "10",
+   "type": "room",
+   "name": "Room 10",
+   "x": 1432,
+   "y": 563,
+   "shape": {
+    "kind": "circle",
+    "r": 60
+   }
+  },
+  {
+   "id": "11",
+   "type": "room",
+   "name": "Security",
+   "x": 2034,
+   "y": 488,
+   "shape": {
+    "kind": "circle",
+    "r": 60
+   }
+  },
+  {
+   "id": "12",
+   "type": "room",
+   "name": "Room 12",
+   "x": 2421,
+   "y": 482,
+   "shape": {
+    "kind": "circle",
+    "r": 62
+   }
+  },
+  {
+   "id": "13",
+   "type": "room",
+   "name": "The Brig",
+   "x": 1969,
+   "y": 595,
+   "shape": {
+    "kind": "circle",
+    "r": 45
+   }
+  },
+  {
+   "id": "14",
+   "type": "room",
+   "name": "Room 14",
+   "x": 2356,
+   "y": 787,
+   "shape": {
+    "kind": "circle",
+    "r": 53
+   }
+  },
+  {
+   "id": "15",
+   "type": "room",
+   "name": "Room 15",
+   "x": 2213,
+   "y": 855,
+   "shape": {
+    "kind": "circle",
+    "r": 56
+   }
+  },
+  {
+   "id": "16",
+   "type": "room",
+   "name": "Room 16",
+   "x": 1738,
+   "y": 861,
+   "shape": {
+    "kind": "circle",
+    "r": 41
+   }
+  },
+  {
+   "id": "17",
+   "type": "room",
+   "name": "The Armory",
+   "x": 1794,
+   "y": 773,
+   "shape": {
+    "kind": "circle",
+    "r": 40
+   }
+  },
+  {
+   "id": "18",
+   "type": "room",
+   "name": "Room 18",
+   "x": 2135,
+   "y": 1065,
+   "shape": {
+    "kind": "circle",
+    "r": 50
+   }
+  },
+  {
+   "id": "19",
+   "type": "room",
+   "name": "Room 19",
+   "x": 2433,
+   "y": 1084,
+   "shape": {
+    "kind": "circle",
+    "r": 59
+   }
+  },
+  {
+   "id": "20",
+   "type": "room",
+   "name": "Room 20",
+   "x": 2417,
+   "y": 1200,
+   "shape": {
+    "kind": "circle",
+    "r": 52
+   }
+  },
+  {
+   "id": "21",
+   "type": "room",
+   "name": "Vending Machines",
+   "x": 2445,
+   "y": 1386,
+   "shape": {
+    "kind": "circle",
+    "r": 43
+   }
+  },
+  {
+   "id": "22",
+   "type": "room",
+   "name": "Lavatory",
+   "x": 2375,
+   "y": 1610,
+   "shape": {
+    "kind": "circle",
+    "r": 45
+   }
+  },
+  {
+   "id": "23",
+   "type": "room",
+   "name": "Lost and Found",
+   "x": 2000,
+   "y": 1485,
+   "shape": {
+    "kind": "circle",
+    "r": 50
+   }
+  },
+  {
+   "id": "24",
+   "type": "room",
+   "name": "Room 24",
+   "x": 1870,
+   "y": 1144,
+   "shape": {
+    "kind": "circle",
+    "r": 80
+   }
+  },
+  {
+   "id": "25",
+   "type": "room",
+   "name": "Casino",
+   "x": 1424,
+   "y": 1261,
+   "shape": {
+    "kind": "circle",
+    "r": 70
+   }
+  },
+  {
+   "id": "26",
+   "type": "room",
+   "name": "The Zemo Zoo",
+   "x": 1145,
+   "y": 1148,
+   "shape": {
+    "kind": "circle",
+    "r": 63
+   }
+  },
+  {
+   "id": "27",
+   "type": "room",
+   "name": "Room 27",
+   "x": 837,
+   "y": 1176,
+   "shape": {
+    "kind": "circle",
+    "r": 70
+   }
+  },
+  {
+   "id": "28",
+   "type": "room",
+   "name": "Room 28",
+   "x": 810,
+   "y": 1450,
+   "shape": {
+    "kind": "circle",
+    "r": 60
+   }
+  },
+  {
+   "id": "29",
+   "type": "room",
+   "name": "Kitchen",
+   "x": 485,
+   "y": 1460,
+   "shape": {
+    "kind": "circle",
+    "r": 60
+   }
+  },
+  {
+   "id": "30",
+   "type": "room",
+   "name": "Room 30",
+   "x": 611,
+   "y": 1161,
+   "shape": {
+    "kind": "circle",
+    "r": 60
+   }
+  },
+  {
+   "id": "31",
+   "type": "room",
+   "name": "Room 31",
+   "x": 465,
+   "y": 1095,
+   "shape": {
+    "kind": "circle",
+    "r": 60
+   }
+  },
+  {
+   "id": "32",
+   "type": "room",
+   "name": "Command Control",
+   "x": 1442,
+   "y": 301,
+   "shape": {
+    "kind": "circle",
+    "r": 125
+   }
+  },
+  {
+   "id": "code_room_1",
+   "type": "code_room",
+   "name": "Code Room 1",
+   "x": 324,
+   "y": 311,
+   "shape": {
+    "kind": "circle",
+    "r": 124
+   }
+  },
+  {
+   "id": "code_room_2",
+   "type": "code_room",
+   "name": "Code Room 2",
+   "x": 325,
+   "y": 1612,
+   "shape": {
+    "kind": "circle",
+    "r": 124
+   }
+  },
+  {
+   "id": "code_room_3",
+   "type": "code_room",
+   "name": "Code Room 3",
+   "x": 2556,
+   "y": 1614,
+   "shape": {
+    "kind": "circle",
+    "r": 122
+   }
+  },
+  {
+   "id": "bio_vat",
+   "type": "bio_vat",
+   "name": "Bio-Vat",
+   "x": 2566,
+   "y": 298,
+   "shape": {
+    "kind": "circle",
+    "r": 108
+   }
+  },
+  {
+   "id": "airlock",
+   "type": "airlock",
+   "name": "Airlock",
+   "x": 1443,
+   "y": 1614,
+   "shape": {
+    "kind": "circle",
+    "r": 116
+   }
+  },
+  {
+   "id": "escape_pod",
+   "type": "escape_pod",
+   "name": "Escape Pod",
+   "x": 1438,
+   "y": 970,
+   "shape": {
+    "kind": "circle",
+    "r": 98
+   }
+  }
+ ],
+ "edges": [
+  {
+   "a": "h_3_0",
+   "b": "h_4_0"
+  },
+  {
+   "a": "h_3_0",
+   "b": "h_3_1"
+  },
+  {
+   "a": "h_4_0",
+   "b": "h_5_0"
+  },
+  {
+   "a": "h_5_0",
+   "b": "h_6_0"
+  },
+  {
+   "a": "h_6_0",
+   "b": "h_7_0"
+  },
+  {
+   "a": "h_7_0",
+   "b": "h_8_0"
+  },
+  {
+   "a": "h_8_0",
+   "b": "h_9_0"
+  },
+  {
+   "a": "h_12_0",
+   "b": "h_13_0"
+  },
+  {
+   "a": "h_13_0",
+   "b": "h_14_0"
+  },
+  {
+   "a": "h_14_0",
+   "b": "h_15_0"
+  },
+  {
+   "a": "h_15_0",
+   "b": "h_16_0"
+  },
+  {
+   "a": "h_16_0",
+   "b": "h_17_0"
+  },
+  {
+   "a": "h_17_0",
+   "b": "h_18_0"
+  },
+  {
+   "a": "h_18_0",
+   "b": "h_19_0"
+  },
+  {
+   "a": "h_18_0",
+   "b": "h_18_1"
+  },
+  {
+   "a": "h_0_1",
+   "b": "h_0_2"
+  },
+  {
+   "a": "h_0_2",
+   "b": "h_0_3"
+  },
+  {
+   "a": "h_0_3",
+   "b": "h_0_4"
+  },
+  {
+   "a": "h_0_4",
+   "b": "h_0_5"
+  },
+  {
+   "a": "h_0_5",
+   "b": "h_0_6"
+  },
+  {
+   "a": "h_0_6",
+   "b": "h_1_6"
+  },
+  {
+   "a": "h_0_6",
+   "b": "h_0_7"
+  },
+  {
+   "a": "h_0_7",
+   "b": "h_0_8"
+  },
+  {
+   "a": "h_0_8",
+   "b": "h_0_9"
+  },
+  {
+   "a": "h_0_9",
+   "b": "h_1_9"
+  },
+  {
+   "a": "h_0_9",
+   "b": "h_0_10"
+  },
+  {
+   "a": "h_3_1",
+   "b": "h_3_2"
+  },
+  {
+   "a": "h_3_2",
+   "b": "h_3_3"
+  },
+  {
+   "a": "h_3_3",
+   "b": "h_3_4"
+  },
+  {
+   "a": "h_3_4",
+   "b": "h_3_5"
+  },
+  {
+   "a": "h_3_5",
+   "b": "h_3_6"
+  },
+  {
+   "a": "h_1_6",
+   "b": "h_2_6"
+  },
+  {
+   "a": "h_2_6",
+   "b": "h_3_6"
+  },
+  {
+   "a": "h_3_6",
+   "b": "h_4_6"
+  },
+  {
+   "a": "h_4_6",
+   "b": "h_5_6"
+  },
+  {
+   "a": "h_5_6",
+   "b": "h_6_6"
+  },
+  {
+   "a": "h_6_6",
+   "b": "h_7_6"
+  },
+  {
+   "a": "h_7_6",
+   "b": "h_8_6"
+  },
+  {
+   "a": "h_12_6",
+   "b": "h_13_6"
+  },
+  {
+   "a": "h_13_6",
+   "b": "h_14_6"
+  },
+  {
+   "a": "h_14_6",
+   "b": "h_15_6"
+  },
+  {
+   "a": "h_15_6",
+   "b": "h_16_6"
+  },
+  {
+   "a": "h_16_6",
+   "b": "h_17_6"
+  },
+  {
+   "a": "h_17_6",
+   "b": "h_18_6"
+  },
+  {
+   "a": "h_18_6",
+   "b": "h_19_6"
+  },
+  {
+   "a": "h_18_6",
+   "b": "h_18_7"
+  },
+  {
+   "a": "h_19_6",
+   "b": "h_20_6"
+  },
+  {
+   "a": "h_20_6",
+   "b": "h_21_6"
+  },
+  {
+   "a": "h_21_6",
+   "b": "h_21_7"
+  },
+  {
+   "a": "h_18_1",
+   "b": "h_18_2"
+  },
+  {
+   "a": "h_18_2",
+   "b": "h_18_3"
+  },
+  {
+   "a": "h_18_3",
+   "b": "h_19_3"
+  },
+  {
+   "a": "h_18_7",
+   "b": "h_18_8"
+  },
+  {
+   "a": "h_18_8",
+   "b": "h_18_9"
+  },
+  {
+   "a": "h_18_9",
+   "b": "h_18_10"
+  },
+  {
+   "a": "h_18_10",
+   "b": "h_18_11"
+  },
+  {
+   "a": "h_18_11",
+   "b": "h_18_12"
+  },
+  {
+   "a": "h_19_3",
+   "b": "h_20_3"
+  },
+  {
+   "a": "h_20_3",
+   "b": "h_21_3"
+  },
+  {
+   "a": "h_21_3",
+   "b": "h_21_4"
+  },
+  {
+   "a": "h_21_1",
+   "b": "h_21_2"
+  },
+  {
+   "a": "h_21_2",
+   "b": "h_21_3"
+  },
+  {
+   "a": "h_21_4",
+   "b": "h_21_5"
+  },
+  {
+   "a": "h_21_5",
+   "b": "h_21_6"
+  },
+  {
+   "a": "h_21_7",
+   "b": "h_21_8"
+  },
+  {
+   "a": "h_21_8",
+   "b": "h_21_9"
+  },
+  {
+   "a": "h_21_9",
+   "b": "h_21_10"
+  },
+  {
+   "a": "h_1_9",
+   "b": "h_2_9"
+  },
+  {
+   "a": "h_2_9",
+   "b": "h_3_9"
+  },
+  {
+   "a": "h_3_9",
+   "b": "h_3_10"
+  },
+  {
+   "a": "h_3_10",
+   "b": "h_3_11"
+  },
+  {
+   "a": "h_3_11",
+   "b": "h_3_12"
+  },
+  {
+   "a": "h_2_12",
+   "b": "h_3_12"
+  },
+  {
+   "a": "h_3_12",
+   "b": "h_4_12"
+  },
+  {
+   "a": "h_4_12",
+   "b": "h_5_12"
+  },
+  {
+   "a": "h_5_12",
+   "b": "h_6_12"
+  },
+  {
+   "a": "h_6_12",
+   "b": "h_7_12"
+  },
+  {
+   "a": "h_7_12",
+   "b": "h_8_12"
+  },
+  {
+   "a": "h_8_12",
+   "b": "h_9_12"
+  },
+  {
+   "a": "h_12_12",
+   "b": "h_13_12"
+  },
+  {
+   "a": "h_13_12",
+   "b": "h_14_12"
+  },
+  {
+   "a": "h_14_12",
+   "b": "h_15_12"
+  },
+  {
+   "a": "h_15_12",
+   "b": "h_16_12"
+  },
+  {
+   "a": "h_16_12",
+   "b": "h_17_12"
+  },
+  {
+   "a": "h_17_12",
+   "b": "h_18_12"
+  },
+  {
+   "a": "ne_1",
+   "b": "ne_2"
+  },
+  {
+   "a": "ne_2",
+   "b": "ne_3"
+  },
+  {
+   "a": "ne_3",
+   "b": "ne_4"
+  },
+  {
+   "a": "ne_4",
+   "b": "ne_5"
+  },
+  {
+   "a": "brig_1",
+   "b": "brig_2"
+  },
+  {
+   "a": "brig_2",
+   "b": "brig_3"
+  },
+  {
+   "a": "sw_1",
+   "b": "sw_2"
+  },
+  {
+   "a": "sw_2",
+   "b": "sw_3"
+  },
+  {
+   "a": "sw_3",
+   "b": "sw_4"
+  },
+  {
+   "a": "sw_4",
+   "b": "sw_5"
+  },
+  {
+   "a": "nwbelt_1",
+   "b": "nwbelt_2"
+  },
+  {
+   "a": "nwbelt_2",
+   "b": "nwbelt_3"
+  },
+  {
+   "a": "sebelt_1",
+   "b": "sebelt_2"
+  },
+  {
+   "a": "sebelt_2",
+   "b": "sebelt_3"
+  },
+  {
+   "a": "ring_nw",
+   "b": "ring_ne"
+  },
+  {
+   "a": "ring_ne",
+   "b": "ring_e"
+  },
+  {
+   "a": "ring_e",
+   "b": "ring_se"
+  },
+  {
+   "a": "ring_se",
+   "b": "ring_sw"
+  },
+  {
+   "a": "ring_sw",
+   "b": "ring_w"
+  },
+  {
+   "a": "ring_w",
+   "b": "ring_nw"
+  },
+  {
+   "a": "1",
+   "b": "h_3_0",
+   "door": true
+  },
+  {
+   "a": "1",
+   "b": "h_0_2",
+   "door": true
+  },
+  {
+   "a": "2",
+   "b": "h_3_3",
+   "door": true
+  },
+  {
+   "a": "3",
+   "b": "h_1_6",
+   "door": true
+  },
+  {
+   "a": "4",
+   "b": "h_4_0",
+   "door": true
+  },
+  {
+   "a": "5",
+   "b": "h_6_0",
+   "door": true
+  },
+  {
+   "a": "6",
+   "b": "h_3_3",
+   "door": true
+  },
+  {
+   "a": "7",
+   "b": "h_3_5",
+   "door": true
+  },
+  {
+   "a": "8",
+   "b": "h_7_6",
+   "door": true
+  },
+  {
+   "a": "9",
+   "b": "nwbelt_2",
+   "door": true
+  },
+  {
+   "a": "10",
+   "b": "nwbelt_1",
+   "door": true
+  },
+  {
+   "a": "11",
+   "b": "ne_5",
+   "door": true
+  },
+  {
+   "a": "12",
+   "b": "h_18_1",
+   "door": true
+  },
+  {
+   "a": "13",
+   "b": "brig_1",
+   "door": true
+  },
+  {
+   "a": "14",
+   "b": "h_21_4",
+   "door": true
+  },
+  {
+   "a": "15",
+   "b": "h_18_6",
+   "door": true
+  },
+  {
+   "a": "16",
+   "b": "ne_1",
+   "door": true
+  },
+  {
+   "a": "17",
+   "b": "brig_3",
+   "door": true
+  },
+  {
+   "a": "18",
+   "b": "h_18_8",
+   "door": true
+  },
+  {
+   "a": "19",
+   "b": "h_19_6",
+   "door": true
+  },
+  {
+   "a": "20",
+   "b": "h_18_8",
+   "door": true
+  },
+  {
+   "a": "21",
+   "b": "h_18_10",
+   "door": true
+  },
+  {
+   "a": "21",
+   "b": "h_21_10",
+   "door": true
+  },
+  {
+   "a": "22",
+   "b": "h_18_12",
+   "door": true
+  },
+  {
+   "a": "23",
+   "b": "h_16_12",
+   "door": true
+  },
+  {
+   "a": "24",
+   "b": "h_14_6",
+   "door": true
+  },
+  {
+   "a": "25",
+   "b": "sebelt_2",
+   "door": true
+  },
+  {
+   "a": "26",
+   "b": "sw_2",
+   "door": true
+  },
+  {
+   "a": "27",
+   "b": "h_5_6",
+   "door": true
+  },
+  {
+   "a": "28",
+   "b": "h_4_12",
+   "door": true
+  },
+  {
+   "a": "29",
+   "b": "h_3_10",
+   "door": true
+  },
+  {
+   "a": "30",
+   "b": "h_3_9",
+   "door": true
+  },
+  {
+   "a": "31",
+   "b": "h_0_7",
+   "door": true
+  },
+  {
+   "a": "32",
+   "b": "h_9_0",
+   "door": true
+  },
+  {
+   "a": "32",
+   "b": "h_12_0",
+   "door": true
+  },
+  {
+   "a": "code_room_1",
+   "b": "h_0_1",
+   "door": true
+  },
+  {
+   "a": "code_room_2",
+   "b": "h_0_10",
+   "door": true
+  },
+  {
+   "a": "code_room_2",
+   "b": "h_2_12",
+   "door": true
+  },
+  {
+   "a": "code_room_3",
+   "b": "h_21_10",
+   "door": true
+  },
+  {
+   "a": "bio_vat",
+   "b": "h_19_0",
+   "door": true
+  },
+  {
+   "a": "bio_vat",
+   "b": "h_21_1",
+   "door": true
+  },
+  {
+   "a": "airlock",
+   "b": "h_9_12",
+   "door": true
+  },
+  {
+   "a": "airlock",
+   "b": "h_12_12",
+   "door": true
+  },
+  {
+   "a": "escape_pod",
+   "b": "ring_nw",
+   "door": true
+  },
+  {
+   "a": "escape_pod",
+   "b": "ring_ne",
+   "door": true
+  },
+  {
+   "a": "escape_pod",
+   "b": "ring_se",
+   "door": true
+  },
+  {
+   "a": "escape_pod",
+   "b": "ring_sw",
+   "door": true
+  },
+  {
+   "a": "ring_w",
+   "b": "h_8_6"
+  },
+  {
+   "a": "ring_e",
+   "b": "h_12_6"
+  },
+  {
+   "a": "ring_nw",
+   "b": "nwbelt_1"
+  },
+  {
+   "a": "ring_ne",
+   "b": "ne_1"
+  },
+  {
+   "a": "ring_se",
+   "b": "sebelt_1"
+  },
+  {
+   "a": "ring_sw",
+   "b": "sw_1"
+  },
+  {
+   "a": "ne_5",
+   "b": "h_14_0"
+  },
+  {
+   "a": "sw_5",
+   "b": "h_6_12"
+  },
+  {
+   "a": "nwbelt_3",
+   "b": "h_8_0"
+  },
+  {
+   "a": "sebelt_3",
+   "b": "h_13_12"
+  },
+  {
+   "a": "ne_3",
+   "b": "brig_1",
+   "tags": [
+    "security_field"
+   ]
+  }
+ ]
+}

@@ -1,170 +1,51 @@
-import type { SpacePosition } from "../../api/boardData";
+import type { BoardSpace } from "../../api/board";
 
 interface Props {
-  space: SpacePosition;
+  space: BoardSpace;
   cardCount: number;
   isHighlighted: boolean;
   onClick?: () => void;
 }
 
-const TYPE_COLORS: Record<string, string> = {
-  hallway: "#2a2a3a",
-  room: "#1a3a5c",
-  code_room: "#5c1a3a",
-  escape_pod: "#3a5c1a",
-  bio_vat: "#5c3a1a",
-  airlock: "#3a1a5c",
-};
-
-const TYPE_STROKE: Record<string, string> = {
-  hallway: "#3a3a5a",
-  room: "#2a5a8a",
-  code_room: "#8a2a5a",
-  escape_pod: "#5a8a2a",
-  bio_vat: "#8a5a2a",
-  airlock: "#5a2a8a",
-};
+function Shape({ space, className }: { space: BoardSpace; className: string }) {
+  const { shape, x, y } = space;
+  switch (shape.kind) {
+    case "rect":
+      return (
+        <rect
+          className={className}
+          x={x - shape.w / 2}
+          y={y - shape.h / 2}
+          width={shape.w}
+          height={shape.h}
+          rx={8}
+          transform={shape.angle ? `rotate(${shape.angle} ${x} ${y})` : undefined}
+        />
+      );
+    case "circle":
+      return <circle className={className} cx={x} cy={y} r={shape.r} />;
+    case "polygon":
+      return <polygon className={className} points={shape.points.map((p) => p.join(",")).join(" ")} />;
+  }
+}
 
 export function Space({ space, cardCount, isHighlighted, onClick }: Props) {
-  const fill = TYPE_COLORS[space.type] || "#2a2a3a";
-  const stroke = isHighlighted ? "#00ff88" : (TYPE_STROKE[space.type] || "#3a3a5a");
-  const strokeWidth = isHighlighted ? 3 : 1.5;
-  const isSpecial = space.type !== "hallway";
-  const radius = isSpecial ? 22 : 16;
-  const isNumbered = !space.id.includes("_");
-  const showName = isSpecial || !isNumbered;
-
-  // For named numbered rooms, show name
-  const isNamedRoom = [
-    "7", "11", "13", "17", "21", "22", "23", "25", "26", "29", "32",
-  ].includes(space.id);
+  // Card badge sits on the upper-right of a room's circle
+  const badgeOffset = space.shape.kind === "circle" ? space.shape.r * 0.72 : 0;
 
   return (
     <g
-      className={isHighlighted ? "space-reachable" : ""}
+      className={isHighlighted ? "space-reachable" : undefined}
       onClick={onClick}
       style={{ cursor: onClick ? "pointer" : "default" }}
     >
-      {/* Space shape */}
-      {isSpecial ? (
-        <rect
-          x={space.x - radius}
-          y={space.y - radius}
-          width={radius * 2}
-          height={radius * 2}
-          rx={6}
-          fill={fill}
-          stroke={stroke}
-          strokeWidth={strokeWidth}
-        />
-      ) : (
-        <circle
-          cx={space.x}
-          cy={space.y}
-          r={radius}
-          fill={fill}
-          stroke={stroke}
-          strokeWidth={strokeWidth}
-        />
-      )}
+      <title>{space.name}</title>
+      <Shape space={space} className={isHighlighted ? "space-shape highlighted" : "space-shape"} />
 
-      {/* Highlight glow */}
-      {isHighlighted && (
-        isSpecial ? (
-          <rect
-            x={space.x - radius - 3}
-            y={space.y - radius - 3}
-            width={(radius + 3) * 2}
-            height={(radius + 3) * 2}
-            rx={8}
-            fill="none"
-            stroke="#00ff88"
-            strokeWidth={1}
-            opacity={0.4}
-          />
-        ) : (
-          <circle
-            cx={space.x}
-            cy={space.y}
-            r={radius + 3}
-            fill="none"
-            stroke="#00ff88"
-            strokeWidth={1}
-            opacity={0.4}
-          />
-        )
-      )}
-
-      {/* Space number */}
-      {isNumbered && (
-        <text
-          x={space.x}
-          y={space.y + 1}
-          textAnchor="middle"
-          dominantBaseline="central"
-          fill="#c0c0d0"
-          fontSize={isNamedRoom ? 9 : 10}
-          fontWeight="600"
-          style={{ pointerEvents: "none" }}
-        >
-          {space.id}
-        </text>
-      )}
-
-      {/* Special space label */}
-      {!isNumbered && (
-        <text
-          x={space.x}
-          y={space.y + 1}
-          textAnchor="middle"
-          dominantBaseline="central"
-          fill="#e0e0e0"
-          fontSize={7}
-          fontWeight="700"
-          style={{ pointerEvents: "none" }}
-        >
-          {space.type === "escape_pod" ? "POD" :
-           space.type === "bio_vat" ? "VAT" :
-           space.type === "airlock" ? "AIR" :
-           space.type === "code_room" ? "CR" + space.id.slice(-1) : "?"}
-        </text>
-      )}
-
-      {/* Room name below for named rooms */}
-      {(isNamedRoom || showName) && (
-        <text
-          x={space.x}
-          y={space.y + radius + 10}
-          textAnchor="middle"
-          fill="#8080a0"
-          fontSize={7}
-          style={{ pointerEvents: "none" }}
-        >
-          {space.name}
-        </text>
-      )}
-
-      {/* Card count indicator */}
       {cardCount > 0 && (
-        <g>
-          <circle
-            cx={space.x + radius - 4}
-            cy={space.y - radius + 4}
-            r={7}
-            fill="#ffcc00"
-            stroke="#0a0a1a"
-            strokeWidth={1}
-          />
-          <text
-            x={space.x + radius - 4}
-            y={space.y - radius + 5}
-            textAnchor="middle"
-            dominantBaseline="central"
-            fill="#0a0a1a"
-            fontSize={8}
-            fontWeight="800"
-            style={{ pointerEvents: "none" }}
-          >
+        <g className="card-badge">
+          <circle cx={space.x + badgeOffset} cy={space.y - badgeOffset} r={22} />
+          <text x={space.x + badgeOffset} y={space.y - badgeOffset + 1} textAnchor="middle" dominantBaseline="central">
             {cardCount}
           </text>
         </g>

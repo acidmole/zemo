@@ -10,6 +10,7 @@ import type {
   DropCardsRequest,
   ListSavesResponse,
 } from "./types";
+import type { BoardData } from "./board";
 
 const BASE_URL = "/api";
 
@@ -54,6 +55,8 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ config }),
     }),
+
+  getBoard: () => apiFetch<BoardData>("/board"),
 
   getState: (gameId: string) =>
     apiFetch<GameStateResponse>(`/game/${gameId}/state`),

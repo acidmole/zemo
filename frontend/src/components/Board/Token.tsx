@@ -12,7 +12,7 @@ interface Props {
 export function Token({ character, x, y, offset, total, isCurrent }: Props) {
   // Offset tokens if multiple characters on the same space
   const angle = total > 1 ? (offset * (2 * Math.PI)) / total - Math.PI / 2 : 0;
-  const offsetDist = total > 1 ? 14 : 0;
+  const offsetDist = total > 1 ? 40 : 0;
   const tx = x + Math.cos(angle) * offsetDist;
   const ty = y + Math.sin(angle) * offsetDist;
 
@@ -26,17 +26,17 @@ export function Token({ character, x, y, offset, total, isCurrent }: Props) {
   return (
     <g
       className={isCurrent ? "token-current" : ""}
-      style={{ color: character.color }}
+      style={{ color: character.color, pointerEvents: "none" }}
       opacity={opacity}
     >
       {/* Token circle */}
       <circle
         cx={tx}
         cy={ty}
-        r={10}
+        r={30}
         fill={fillColor}
         stroke={isCurrent ? "#ffffff" : "#0a0a1a"}
-        strokeWidth={isCurrent ? 2.5 : 1.5}
+        strokeWidth={isCurrent ? 7 : 4}
       />
 
       {/* Character initial */}
@@ -46,9 +46,8 @@ export function Token({ character, x, y, offset, total, isCurrent }: Props) {
         textAnchor="middle"
         dominantBaseline="central"
         fill="#ffffff"
-        fontSize={10}
+        fontSize={32}
         fontWeight="800"
-        style={{ pointerEvents: "none" }}
       >
         {isDead ? "X" : initial}
       </text>
@@ -58,11 +57,11 @@ export function Token({ character, x, y, offset, total, isCurrent }: Props) {
         <circle
           cx={tx}
           cy={ty}
-          r={12}
+          r={37}
           fill="none"
           stroke="#ff8800"
-          strokeWidth={1}
-          strokeDasharray="3 2"
+          strokeWidth={4}
+          strokeDasharray="9 6"
         />
       )}
     </g>

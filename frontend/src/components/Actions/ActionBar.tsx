@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ActionType, GameState, CharacterState } from "../../api/types";
+import { spaceLabel, useBoard } from "../../api/board";
 
 interface Props {
   availableActions: ActionType[];
@@ -42,6 +43,7 @@ export function ActionBar({
   onHeal,
   onPass,
 }: Props) {
+  const board = useBoard();
   const [showTargetSelect, setShowTargetSelect] = useState<"fight" | "shoot" | null>(null);
   const [selectedWeapon, setSelectedWeapon] = useState<string>("");
 
@@ -227,7 +229,7 @@ export function ActionBar({
                   <div>
                     <div style={{ fontWeight: 600, fontSize: "0.85rem" }}>{target.name}</div>
                     <div style={{ fontSize: "0.7rem", color: "#9090b0" }}>
-                      HP: {target.health}/{target.max_health} | Pos: {target.position}
+                      HP: {target.health}/{target.max_health} | {spaceLabel(board, target.position)}
                     </div>
                   </div>
                 </div>
