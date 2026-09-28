@@ -5,6 +5,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.data.board_layout import BOARD_DATA
 from app.routes.game_routes import router as game_router
 from app.routes.save_routes import router as save_router
 
@@ -32,3 +33,9 @@ app.include_router(save_router)
 def root() -> dict:
     """Health check endpoint."""
     return {"status": "ok", "game": "Space Station Zemo"}
+
+
+@app.get("/board")
+def board() -> dict:
+    """Board image, spaces (with drawing shapes) and connections."""
+    return BOARD_DATA

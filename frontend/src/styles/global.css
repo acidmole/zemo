@@ -236,14 +236,41 @@ body {
   max-height: calc(100vh - 280px);
 }
 
-.board-edge {
-  stroke: #2a2a4a;
-  stroke-width: 2;
+.board-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
 }
 
-.board-edge.interior {
-  stroke: #3a3a5a;
-  stroke-dasharray: 6 4;
+/* Spaces are drawn on top of the board art: invisible until reachable */
+.space-shape {
+  fill: transparent;
+  stroke: none;
+}
+
+.space-shape.highlighted {
+  fill: rgba(0, 255, 136, 0.28);
+  stroke: var(--neon-green);
+  stroke-width: 7;
+}
+
+.space-reachable:hover .space-shape.highlighted {
+  fill: rgba(0, 255, 136, 0.5);
+}
+
+.card-badge circle {
+  fill: #ffcc00;
+  stroke: #0a0a1a;
+  stroke-width: 4;
+}
+
+.card-badge text {
+  fill: #0a0a1a;
+  font-size: 26px;
+  font-weight: 800;
+  pointer-events: none;
 }
 
 /* ===== Health Track ===== */
@@ -700,8 +727,8 @@ body {
 
 /* ===== Space glow for reachable ===== */
 @keyframes space-glow {
-  0%, 100% { filter: drop-shadow(0 0 3px var(--neon-green)); }
-  50% { filter: drop-shadow(0 0 8px var(--neon-green)); }
+  0%, 100% { filter: drop-shadow(0 0 6px var(--neon-green)); }
+  50% { filter: drop-shadow(0 0 18px var(--neon-green)); }
 }
 
 .space-reachable {

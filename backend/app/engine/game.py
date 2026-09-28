@@ -96,14 +96,12 @@ class GameEngine:
 
             # --- Create character states ---
             players: list[CharacterState] = []
-            occupied_starts: set[str] = set()
 
             for player_idx, char_template_id in enumerate(config.player_characters):
                 tmpl = CHARACTER_TEMPLATES[char_template_id]
 
                 # Roll starting position
-                start_space = self._roll_starting_position(occupied_starts)
-                occupied_starts.add(start_space)
+                start_space = self._roll_starting_position()
 
                 char_state = CharacterState(
                     id=f"{char_template_id}_{player_idx}",
@@ -155,8 +153,8 @@ class GameEngine:
 
             # Log starting positions
             for p in players:
-                space_name = ROOM_NAMES.get(p.position, f"Space {p.position}")
-                state.game_log.append(f"{p.name} starts at {space_name} (space {p.position}).")
+                space_name = ROOM_NAMES.get(p.position, "a hallway")
+                state.game_log.append(f"{p.name} starts in {space_name}.")
 
             # Compute available actions (not applicable in movement phase but keep consistent)
             current_char = self._get_current_character(state)
@@ -309,7 +307,7 @@ class GameEngine:
                 state.game_log.append(f"{current_char.name} leaves the Bio-Vat!")
 
             current_char.has_moved_this_turn = True
-            space_name = ROOM_NAMES.get(target_space_id, f"Space {target_space_id}")
+            space_name = ROOM_NAMES.get(target_space_id, "a hallway")
             state.game_log.append(f"{current_char.name} moves to {space_name}.")
 
             # Clear pending movement data
@@ -989,25 +987,12 @@ class GameEngine:
     # Helper Methods
     # ------------------------------------------------------------------
 
-    def _roll_starting_position(self, occupied: set[str]) -> str:
-        """Roll 2d6 multiply for a starting position, avoiding conflicts."""
-        max_attempts = 100
-        for _ in range(max_attempts):
-            result = dice.roll_2d6_multiply()
-            space_id = str(result)
+    def _roll_starting_position(self) -> str:
+        """Roll 2d6 multiply for the starting room (1-32).
 
-            # Check if it's a hallway that's already occupied
-            if not board.is_room(space_id) and space_id in occupied:
-                continue
-
-            return space_id
-
-        # Fallback: find any unoccupied numbered space
-        for i in range(1, 33):
-            sid = str(i)
-            if sid not in occupied or board.is_room(sid):
-                return sid
-        return "1"
+        Every result is a room, and rooms hold any number of characters.
+        """
+        return str(dice.roll_2d6_multiply())
 
     def _compute_turn_order(self, state: GameState) -> list[str]:
         """Compute turn order: highest health first, ties broken by player index."""

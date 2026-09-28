@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { CharacterState } from "../../api/types";
+import { spaceLabel, useBoard } from "../../api/board";
 
 interface Props {
   player: CharacterState | null;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 export function PlayerInfo({ player, onDropCards }: Props) {
+  const board = useBoard();
   const [showCode, setShowCode] = useState(false);
   const [selectedDrop, setSelectedDrop] = useState<Set<string>>(new Set());
 
@@ -81,7 +83,7 @@ export function PlayerInfo({ player, onDropCards }: Props) {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", padding: "2px 0" }}>
           <span style={{ color: "#9090b0" }}>Position</span>
-          <span style={{ fontFamily: "monospace" }}>{player.position}</span>
+          <span>{spaceLabel(board, player.position)}</span>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", padding: "2px 0" }}>
           <span style={{ color: "#9090b0" }}>Weight</span>

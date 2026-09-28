@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import type { GameState } from "../../api/types";
-import { BOARD_SPACES, BOARD_EDGES, SPACE_MAP } from "../../api/boardData";
+import { useBoard } from "../../api/board";
+import type { BoardSpace } from "../../api/board";
 import { Space } from "./Space";
 import { Token } from "./Token";
 import { CodeRoom } from "./CodeRoom";
@@ -13,7 +14,14 @@ interface Props {
 }
 
 export function Board({ gameState, highlightedSpaces, onSpaceClick, currentPlayerId }: Props) {
+  const board = useBoard();
   const highlightedSet = useMemo(() => new Set(highlightedSpaces), [highlightedSpaces]);
+
+  const spaceMap = useMemo(() => {
+    const map: Record<string, BoardSpace> = {};
+    for (const space of board?.spaces ?? []) map[space.id] = space;
+    return map;
+  }, [board]);
 
   // Build a map of space_id -> character states for token placement
   const charactersBySpace = useMemo(() => {
@@ -27,75 +35,52 @@ export function Board({ gameState, highlightedSpaces, onSpaceClick, currentPlaye
     return map;
   }, [gameState.players]);
 
-  // Star field background
-  const stars = useMemo(() => {
-    const s = [];
-    for (let i = 0; i < 80; i++) {
-      s.push({
-        cx: Math.random() * 920,
-        cy: Math.random() * 860,
-        r: Math.random() * 1.2 + 0.3,
-        opacity: Math.random() * 0.5 + 0.2,
-      });
-    }
-    return s;
-  }, []);
+  if (!board) {
+    return <div className="board-loading">Loading board...</div>;
+  }
+
+  const { width, height, src } = board.image;
 
   return (
     <svg
       className="board-svg"
-      viewBox="0 0 920 860"
+      viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio="xMidYMid meet"
     >
-      {/* Dark starfield background */}
-      <rect x="0" y="0" width="920" height="860" fill="#060614" rx="12" />
-      {stars.map((star, i) => (
-        <circle key={i} cx={star.cx} cy={star.cy} r={star.r} fill="#ffffff" opacity={star.opacity} />
-      ))}
+      <image href={src} x={0} y={0} width={width} height={height} />
 
-      {/* Title */}
-      <text x="460" y="28" textAnchor="middle" fill="#00aaff" fontSize="14" fontWeight="700" opacity="0.6">
-        SPACE STATION ZEMO
-      </text>
-
-      {/* Edges (connections between spaces) */}
-      {BOARD_EDGES.map((edge, i) => {
-        const from = SPACE_MAP[edge.from];
-        const to = SPACE_MAP[edge.to];
-        if (!from || !to) return null;
-        const isInterior =
-          edge.from.includes("_") || edge.to.includes("_");
-        return (
-          <line
-            key={i}
-            x1={from.x}
-            y1={from.y}
-            x2={to.x}
-            y2={to.y}
-            className={`board-edge ${isInterior ? "interior" : ""}`}
-          />
-        );
-      })}
-
-      {/* Spaces */}
-      {BOARD_SPACES.map((space) => {
-        const spaceState = gameState.spaces[space.id];
-        const cardCount = spaceState?.cards?.length ?? 0;
+      {/* Spaces: invisible until reachable, then highlighted and clickable */}
+      {board.spaces.map((space) => {
         const isHighlighted = highlightedSet.has(space.id);
         return (
           <Space
             key={space.id}
             space={space}
-            cardCount={cardCount}
+            cardCount={gameState.spaces[space.id]?.cards?.length ?? 0}
             isHighlighted={isHighlighted}
             onClick={isHighlighted && onSpaceClick ? () => onSpaceClick(space.id) : undefined}
           />
         );
       })}
 
+      {/* Code Room status indicators */}
+      {gameState.code_rooms.map((cr) => {
+        const space = spaceMap[`code_room_${cr.room_number}`];
+        if (!space || space.shape.kind !== "circle") return null;
+        return (
+          <CodeRoom
+            key={cr.room_number}
+            value={cr.value}
+            x={space.x}
+            y={space.y}
+            radius={space.shape.r}
+          />
+        );
+      })}
+
       {/* Tokens (characters on the board) */}
       {Object.entries(charactersBySpace).map(([spaceId, chars]) => {
-        const space = SPACE_MAP[spaceId];
+        const space = spaceMap[spaceId];
         if (!space) return null;
         return chars.map((char, idx) => (
           <Token
@@ -108,22 +93,6 @@ export function Board({ gameState, highlightedSpaces, onSpaceClick, currentPlaye
             isCurrent={char.id === currentPlayerId}
           />
         ));
-      })}
-
-      {/* Code Room status indicators */}
-      {gameState.code_rooms.map((cr) => {
-        const spaceId = `code_room_${cr.room_number}`;
-        const space = SPACE_MAP[spaceId];
-        if (!space) return null;
-        return (
-          <CodeRoom
-            key={cr.room_number}
-            roomNumber={cr.room_number}
-            value={cr.value}
-            x={space.x}
-            y={space.y}
-          />
-        );
       })}
     </svg>
   );

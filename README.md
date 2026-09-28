@@ -57,7 +57,7 @@ Open **http://localhost:80**.
    - **Pete the Cook** (HP 13, 2 actions/turn) — versatile commando
    - **The Rats** (HP 9) — fragile but scrappy
 4. Enter **player names** and secretly pick an **escape code** (AAA through BBB)
-5. Click **Start Game** — characters are placed at random starting positions
+5. Click **Start Game** — each character starts in a random numbered room (2d6 multiplied)
 
 ### Movement Phase
 
@@ -66,7 +66,7 @@ Each round starts with all players moving in order (highest HP first):
 1. Click **Roll Dice** to roll 2d6 + movement modifier
 2. **Reachable spaces glow green** on the board — click one to move there
 3. Or click **Stay Here** to remain in place
-4. Rules: cannot enter/pass through a **hallway** occupied by another character; **rooms** allow multiple occupants
+4. Rules: each hallway square or room entered costs one step; rooms are entered through their doors. You cannot enter/pass through a **hallway square** occupied by another character; **rooms** allow multiple occupants and can be passed through
 
 ### Action Phase
 
@@ -99,8 +99,8 @@ After all players move, each player gets 1 action (Pete gets 2 different ones):
 - [x] Complete game state machine with turn flow
 - [x] 2-4 player game creation with character selection
 - [x] Secret escape code selection (8 codes: AAA through BBB)
-- [x] 36-card deck: shuffled and dealt (32 to spaces, 4 to recycling bin)
-- [x] 2d6 x multiply starting position rolls
+- [x] 36-card deck: shuffled and dealt (one to each of rooms 1-32, 4 to recycling bin)
+- [x] 2d6 x multiply starting room rolls
 - [x] Turn order by health (highest first), recalculated each round
 - [x] Two-phase rounds: Movement then Actions
 - [x] Movement: 2d6 + modifier, BFS pathfinding with hallway blocking
@@ -127,9 +127,8 @@ After all players move, each player gets 1 action (Pete gets 2 different ones):
 ### Frontend (React/TypeScript/Vite)
 - [x] Game setup wizard (player count, character selection, names, escape codes)
 - [x] Saved games panel on setup screen (list, restore, delete)
-- [x] SVG board with 32 numbered spaces + 6 special spaces
-- [x] Board edges connecting adjacent spaces
-- [x] Color-coded spaces (hallways, rooms, code rooms, escape pod, bio-vat, airlock)
+- [x] Board built from the original printed board: the artwork is the background, with 112 hallway squares, rooms 1-32, 6 special rooms and their doors traced on top
+- [x] Hallway squares, rooms and doors match the printed board, including the diagonal corridors, striped belts and the ring around the Escape Pod
 - [x] Character tokens on board with color and initials
 - [x] Multiple tokens on same space (offset rendering)
 - [x] Current player pulse animation
@@ -148,8 +147,7 @@ After all players move, each player gets 1 action (Pete gets 2 different ones):
 - [x] Game log (scrollable, last 20 events)
 - [x] Game over screen with winner display
 - [x] Dark space theme with neon accents
-- [x] Room name labels on board
-- [x] Card count indicators on spaces
+- [x] Card count indicators on rooms
 - [x] Code room A/B/? status badges
 
 ---
@@ -198,8 +196,8 @@ After all players move, each player gets 1 action (Pete gets 2 different ones):
 
 ### Phase 6: Advanced Board Features
 - [ ] Airlock mechanics (suck players toward airlock, death in space)
-- [ ] Security Field (odd-roll restriction between Brig and Armory)
-- [ ] X-Ray Zone (reveal cards when passing through)
+- [ ] Security Field (odd-roll restriction between Brig and Armory; the crossing is tagged `security_field` in the board data)
+- [ ] X-Ray Zone (reveal cards when passing through; the two green ring sectors are tagged `x_ray`)
 - [ ] Climate Control effects (gravity changes, life support)
 
 ### Phase 7: Polish & Multiplayer
@@ -222,7 +220,7 @@ After all players move, each player gets 1 action (Pete gets 2 different ones):
 |----------|-----------------------------|
 | Backend  | Python 3.12+, FastAPI, Pydantic, Uvicorn |
 | Frontend | React 19, TypeScript, Vite 6 |
-| Board    | SVG rendering (no canvas)   |
+| Board    | Original board art + SVG overlay (no canvas) |
 | State    | Server-side (all logic in Python) |
 | API      | REST (JSON)                 |
 
@@ -244,7 +242,8 @@ zemo/
         rng.py             # RNG state capture/replay for deterministic saves
         event_log.py       # JSONL event logger and replayer
       data/
-        board_layout.py    # Board graph definition (38 nodes, edges, positions)
+        board.json         # Traced board: spaces, shapes, doors (generated)
+        board_layout.py    # Loads board.json into the movement graph
         characters.py      # 5 character stat blocks
         cards.py           # 36 card definitions
       routes/
@@ -257,9 +256,10 @@ zemo/
       api/
         client.ts          # Fetch wrapper for backend API
         types.ts           # TypeScript types matching Pydantic models
-        boardData.ts       # Board layout data for SVG rendering
+        board.ts           # Board data from GET /board, useBoard hook
+        boardData.ts       # Character templates and escape codes
       components/
-        Board/             # SVG board, spaces, tokens, code room badges
+        Board/             # Board art with space highlights, tokens, code room badges
         HUD/               # Health track, player info, turn indicator
         Actions/           # Action bar, movement UI, fight dialog, card inspect
         Setup/             # Game setup wizard, dice roll, saved games panel
@@ -269,9 +269,14 @@ zemo/
         global.css         # Dark space theme
       App.tsx              # Main app orchestration
       main.tsx             # Entry point
+    public/
+      board.webp           # Board image stitched from the PDF (generated)
     package.json
     vite.config.ts
   shared/                  # Original board game PDFs (reference)
+  tools/
+    build_board.py         # Stitches the PDF board tiles into board.webp
+    board_trace.py         # Hand-traced board data; generates board.json
   README.md
 ```
 
@@ -280,6 +285,7 @@ zemo/
 | Method | Path                          | Description                 |
 |--------|-------------------------------|-----------------------------|
 | GET    | `/`                           | Health check                |
+| GET    | `/board`                      | Board image, spaces and connections |
 | POST   | `/game/create`                | Create a new game           |
 | GET    | `/game/{id}/state`            | Get current game state      |
 | POST   | `/game/{id}/roll-movement`    | Roll movement dice          |
@@ -289,6 +295,17 @@ zemo/
 | GET    | `/saves/`                     | List all saved games        |
 | POST   | `/saves/restore/{id}`         | Restore a game from save    |
 | DELETE | `/saves/{id}`                 | Delete a save file          |
+
+## Board Data
+
+The board comes from `shared/SSZemo_Stand_Ups-n-Board.pdf`, pages 2-10, which are nine tiles of one board. Two scripts in `tools/` produce the generated files:
+
+```bash
+uv run --with pillow python tools/build_board.py   # frontend/public/board.webp (needs pdftoppm)
+python tools/board_trace.py                        # backend/app/data/board.json
+```
+
+All coordinates in `board_trace.py` are pixels in `board.webp`, so change the image build only together with the tracing. The straight hallways sit on a 22 x 13 grid. The diagonal corridors, striped belts, pod ring sectors, room anchors and doors are listed explicitly. Save files created before this board use the old space IDs and will not restore.
 
 ## Save/Restore System
 
